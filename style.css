@@ -1,0 +1,89 @@
+/* 基础样式 */
+/* ... 完整CSS样式（与之前相同） ... */
+
+/* 添加响应式设计 */
+@media (max-width: 768px) {
+    .sword-nav {
+        position: static;
+        transform: none;
+        margin-bottom: 40px;
+    }
+
+    .sword-nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        margin: 10px;
+        flex-direction: row;
+    }
+
+    .nav-text {
+        writing-mode: horizontal-tb;
+        letter-spacing: normal;
+        margin-left: 10px;
+    }
+
+    .timeline:before {
+        left: 30px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        justify-content: flex-start;
+        padding-left: 60px;
+        padding-right: 0;
+    }
+
+    .timeline-year {
+        left: 30px;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+
+    .timeline-content:before {
+        right: auto;
+        left: -10px;
+        border-left: none;
+        border-right: 10px solid rgba(26, 35, 126, 0.3);
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .sword-nav, .bg-mountains, .bg-clouds, .footer {
+        display: none;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    .content-section {
+        background: white;
+        color: black;
+        box-shadow: none;
+        border: none;
+    }
+    
+    h1, h2, h3, h4 {
+        color: #333;
+        text-shadow: none;
+    }
+}
